@@ -1,3 +1,4 @@
 node_modules/
 venv/
 static/
+content/data/ghost-dev.db

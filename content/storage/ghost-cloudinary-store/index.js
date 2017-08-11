@@ -2,13 +2,13 @@ var Promise = require('bluebird');
 var cloudinary = require('cloudinary');
 var util = require('util');
 
-var baseStore = require('/app/core/server/storage/index.js');
+baseStore = require('../../../core/server/storage/base');
 
 // TODO: Add support for private_cdn
 // TODO: Add support for secure_distribution
 // TODO: Add support for cname
 // TODO: Add support for cdn_subdomain
-// http://cloudinary.com/documentation/node_additional_topics#configuration_options
+// https://cloudinary.com/documentation/node_additional_topics#configuration_options
 
 function CloudinaryStore(config) {
     baseStore.call(this);
@@ -55,3 +55,4 @@ CloudinaryStore.prototype.serve = function() {
 };
 
 module.exports = CloudinaryStore;
+JavaScript

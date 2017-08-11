@@ -1,5 +1,8 @@
 var Promise = require('bluebird');
 var cloudinary = require('cloudinary');
+var util = require('util');
+
+var baseStore = require('ghost-storage-base');
 
 // TODO: Add support for private_cdn
 // TODO: Add support for secure_distribution
@@ -7,12 +10,15 @@ var cloudinary = require('cloudinary');
 // TODO: Add support for cdn_subdomain
 // http://cloudinary.com/documentation/node_additional_topics#configuration_options
 
-function store(config) {
-  this.config = config || {};
-  cloudinary.config(config);
+function CloudinaryStore(config) {
+    baseStore.call(this);
+    this.config = config || {};
+    cloudinary.config(config);
 }
 
-store.prototype.save = function(image) {
+util.inherits(CloudinaryStore, baseStore);
+
+CloudinaryStore.prototype.save = function(image) {
   var secure = this.config.secure || false;
 
   return new Promise(function(resolve) {
@@ -22,10 +28,30 @@ store.prototype.save = function(image) {
   });
 };
 
-store.prototype.serve = function() {
+CloudinaryStore.prototype.delete = function(image) {
+
+  return new Promise(function(resolve) {
+    cloudinary.uploader.destroy('zombie', function(result) {
+      resolve(result)
+    });
+  });
+};
+
+CloudinaryStore.prototype.exists = function(filename) {
+  return new Promise(function(resolve) {
+    if (cloudinary.image(filename, { })) {
+        resolve(true);
+    } else {
+        resolve(false);
+    }
+  });
+
+}
+
+CloudinaryStore.prototype.serve = function() {
   return function (req, res, next) {
     next();
   };
 };
 
-module.exports = store;
+module.exports = CloudinaryStore;

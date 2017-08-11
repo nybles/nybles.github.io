@@ -55,4 +55,3 @@ CloudinaryStore.prototype.serve = function() {
 };
 
 module.exports = CloudinaryStore;
-JavaScript

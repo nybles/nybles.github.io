@@ -2,7 +2,7 @@ var Promise = require('bluebird');
 var cloudinary = require('cloudinary');
 var util = require('util');
 
-var baseStore = require('core/server/storage');
+var baseStore = require('/app/core/server/storage');
 
 // TODO: Add support for private_cdn
 // TODO: Add support for secure_distribution

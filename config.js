@@ -13,7 +13,7 @@ config = {
     production: {
         url: 'http://nybles.herokuapp.com',
         mail: {},
-        fileStorage: false,
+
         database: {  
           client: 'postgres',
           connection: {
@@ -25,6 +25,15 @@ config = {
           },
           debug: false
         },
+
+        storage: {
+            active: 'ghost-cloudinary-store',
+            'ghost-cloudinary-store': {
+                cloud_name: process.env.CLOUD_NAME,
+                api_key: process.env.API_KEY,
+                api_secret: process.env.API_SECRET
+            }
+        }
 
         server: {  
           host: '0.0.0.0',

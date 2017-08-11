@@ -33,8 +33,8 @@ config = {
                 api_key: process.env.API_KEY,
                 api_secret: process.env.API_SECRET
             }
-        }
-
+        },
+        
         server: {  
           host: '0.0.0.0',
           port: process.env.PORT

@@ -230,7 +230,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 .site-nav-logo img {
     display: block;
     width: auto;
-    height: 21px;
+    height: 41px;
 }
 
 .nav {
@@ -700,7 +700,7 @@ The first (most recent) post in the list is styled to be bigger than the others 
 .post-full-content video {
     display: block;
     margin: 1.5em auto;
-    max-width: 1040px;
+    max-width: 900px;
 }
 @media (max-width: 1040px) {
     .post-full-content img,

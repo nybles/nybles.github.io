@@ -71,7 +71,7 @@ into the {body} of the default.hbs template --}}
                 {{/author}}
             </footer>
 
-            <div style="max-width: 900px;" class="fb-comments" data-href="http://nybles.tech" data-width="100%" data-numposts="10"></div>
+            <div style="max-width: 900px;" class="fb-comments" data-href="{{@blog.url}}{{url}}" data-width="100%" data-numposts="10"></div>
 
             {{!-- Email subscribe form at the bottom of the page --}}
             {{#if @labs.subscribers}}

@@ -46,14 +46,6 @@ into the {body} of the default.hbs template --}}
                 {{content}}
             </section>
 
-            {{!-- Email subscribe form at the bottom of the page --}}
-            {{#if @labs.subscribers}}
-            <section class="subscribe-form">
-                <h3 class="subscribe-form-title">Subscribe to {{@blog.title}}</h3>
-                <p>Get the latest posts delivered right to your inbox</p>
-                {{subscribe_form placeholder="youremail@example.com"}}
-            </section>
-            {{/if}}
 
             <footer class="post-full-footer">
                 {{!-- Everything inside the #author tags pulls data from the author --}}
@@ -78,6 +70,18 @@ into the {body} of the default.hbs template --}}
 
                 {{/author}}
             </footer>
+
+            <div style="max-width: 900px;" class="fb-comments" data-href="http://nybles.tech" data-width="100%" data-numposts="10"></div>
+
+            {{!-- Email subscribe form at the bottom of the page --}}
+            {{#if @labs.subscribers}}
+            <section class="subscribe-form">
+                <h3 class="subscribe-form-title">Subscribe to {{@blog.title}}</h3>
+                <p>Get the latest posts delivered right to your inbox</p>
+                {{subscribe_form placeholder="youremail@example.com"}}
+            </section>
+            {{/if}}
+
 
             {{!--
 
@@ -159,8 +163,6 @@ into the {body} of the default.hbs template --}}
 {{> floating-header}}
 
 {{/post}}
-
-<div style="float: right; margin: 10px;" class="fb-comments" data-href="http://nybles.tech" data-width="600px" data-numposts="10"></div>
 
 
 {{!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs --}}

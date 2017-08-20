@@ -537,6 +537,7 @@ The first (most recent) post in the list is styled to be bigger than the others 
     padding: 6vw 3vw 3vw;
     max-width: 1040px;
     text-align: center;
+    padding-bottom: 0;
 }
 
 .post-full-meta {
@@ -667,6 +668,11 @@ The first (most recent) post in the list is styled to be bigger than the others 
     min-width: 100%;
 }
 
+ .post-full-content h2:first-child {
+    font-weight: normal;
+    color: rgba(0,0,0,0.4);
+}
+
 .post-template .kg-card-markdown > p:first-child {
     font-size: 1.25em;
     line-height: 1.5em;
@@ -723,13 +729,16 @@ Super neat trick courtesy of @JoelDrapper
 }
 
 .post-full-content blockquote {
-    margin: 0 0 1.5em 0;
+    width: 78% !important;
+    text-align: left;
+    left: 0;
+    right: 0;
+    margin: auto;
+    color: rgba(0,0,0,0.48);
+    line-height: 3.5rem;
+    font-size: 2rem;
     padding: 1.5em 0;
     border: 0;
-    color: var(--blue);
-    font-size: 3rem;
-    line-height: 1.6em;
-    text-align: center;
 }
 
 .post-full-content blockquote:before {

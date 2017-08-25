@@ -1,11 +1,11 @@
 # [Nybles](https://nybles.herokuapp.com/) 
 
-In order to create your own Ghost blog for free and host it at Github pages, check the following instructions. These instructions were tested within Linux, if you know how to make it work for Windows or Mac OS, please let me know and I'll add the instructions here. [**Check out the Live Demo**](https://nybles.herokuapp.com/).
+In order to create your own Ghost blog for free and host it on Github pages, check the following instructions. These instructions were tested on Linux, if you know how to make it work for Windows or Mac OS, please let me know and I'll add the instructions here. [**Check out the Live Demo**](https://nybles.herokuapp.com/).
 
 
 ## Prerequisites
 Before we start, you need to install some prerequisites:
-- [**pip**](https://pip.pypa.io/en/stable/quickstart/): Python 2.7.9 and later comes with *pip* by default, so it won't will bother you.
+- [**pip**](https://pip.pypa.io/en/stable/quickstart/): Python 2.7.9 and later comes with *pip* by default, so it won't bother you.
 - [**buster**](https://pypi.python.org/pypi/buster/0.1.3): a Python package.
 - [**NodeJS**](https://nodejs.org/en/): make sure that your [NodeJS version is officially supported by latest Ghost release](http://support.ghost.org/supported-node-versions/).
 - [**npm**](https://nodejs.org/en/): NodeJS package manager.
